@@ -321,13 +321,7 @@ body.dark {
     }
 }
 
-.project__tags {
-    display: flex;
-    justify-content: space-between;
-    margin: 0.5em 0;
-    font-size: 0.6rem;
-    width: 275px;
-}
+
 
 @media screen and (min-width: 760px) {
     .project__tags {
@@ -336,12 +330,24 @@ body.dark {
     }
 }
 
+.project__tags {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Permitir que los tags se envuelvan a la siguiente línea si no caben */
+    align-items: flex-start;
+    /* Alinea los tags al principio del eje Y */
+}
+
 .project__tag {
     padding: 0.4em 0.8em;
     border-radius: var(--border-radius);
     background-color: var(--primary-color);
     color: var(--bg-color);
     transition: var(--transition);
+    margin-right: 5px;
+    margin-bottom: 10px;
+    /* Espaciado vertical entre los tags */
 }
 
 
@@ -399,7 +405,7 @@ body.dark {
 
 
 
-/*51:00*/
+/*Empieza el login*/
 .card--project--large {
     .card--project {
         display: grid;
@@ -419,6 +425,32 @@ body.dark {
 }
 
 .card--project--large .card__text {
+    flex-grow: 1;
+    /* Permite que el texto ocupe el espacio disponible */
+    margin-bottom: 20px;
+    /* Añade espacio entre el texto y los botones */
+}
+
+/*Empieza el login*/
+.card--project--large2 {
+    .card--project {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-column: 1 / -1;
+    }
+}
+
+.card--project--large2 .card__image-container {
+    margin-bottom: 100px;
+    /* Añade espacio entre la imagen y el contenido */
+}
+
+.card--project--large2 .project__tags {
+    margin-bottom: 10px;
+    /* Añade espacio entre las etiquetas y el contenido */
+}
+
+.card--project--large2 .card__text {
     flex-grow: 1;
     /* Permite que el texto ocupe el espacio disponible */
     margin-bottom: 20px;
